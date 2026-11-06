@@ -59,8 +59,21 @@ if [ "$ENABLE" -eq 1 ] && command -v gsettings >/dev/null 2>&1; then
   current="$(gsettings get org.gnome.shell enabled-extensions)"
   case "$current" in
     *"'$UUID'"*) ;;
-    "@as []") gsettings set org.gnome.shell enabled-extensions "['$UUID']" ;;
+    "@as []")
+      # An empty read while GNOME reports enabled extensions means gsettings is
+      # reading the wrong database (e.g. HOME overridden); writing would wipe
+      # the real list down to this one extension.
+      if command -v gnome-extensions >/dev/null 2>&1 && gnome-extensions list --enabled 2>/dev/null | grep -q .; then
+        echo "Refusing to enable: gsettings returned an empty list but GNOME has extensions enabled." >&2
+        echo "Enable it with: gnome-extensions enable $UUID (after logging in again)" >&2
+        ENABLE=0
+      else
+        gsettings set org.gnome.shell enabled-extensions "['$UUID']"
+      fi
+      ;;
     *) gsettings set org.gnome.shell enabled-extensions "$(echo "$current" | sed "s/]\$/, '$UUID']/")" ;;
   esac
-  echo "Enabled. Log out and back in once (Wayland) for GNOME to load it."
+  if [ "$ENABLE" -eq 1 ]; then
+    echo "Enabled. Log out and back in once (Wayland) for GNOME to load it."
+  fi
 fi
