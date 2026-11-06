@@ -1,0 +1,11 @@
+{
+  "uuid": "sleek-notifications@passabilities.dev",
+  "name": "Sleek Notifications",
+  "description": "Modern, stackable notification banners that auto-dismiss, plus a redesigned notification center. Swipe to dismiss, app-colored accents, and everything is configurable.",
+  "shell-version": [
+    "51"
+  ],
+  "url": "https://github.com/passabilities/sleek-notifications",
+  "settings-schema": "org.gnome.shell.extensions.sleek-notifications",
+  "version": 1
+}

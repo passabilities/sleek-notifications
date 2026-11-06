@@ -1,0 +1,268 @@
+/* Card */
+.message.sleek-notification {
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  min-height: 0;
+  padding: 6px;
+  margin: 4px;
+}
+.message.sleek-notification.sleek-highlight { box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.08); }
+.message.sleek-notification.sleek-accent { box-shadow: 0 2px 0 0 -st-accent-color; }
+.message.sleek-notification.sleek-hover { border-color: rgba(255, 255, 255, 0.22); }
+
+/* Header */
+.sleek-notification .message-header { color: #8f929c; }
+.sleek-notification .message-header .message-header-content .message-source-title { font-weight: normal; }
+.sleek-notification .message-header .message-header-content .event-time { color: #7d808a; }
+.sleek-notification .message-header .message-close-button {
+  background-color: rgba(255, 255, 255, 0.10);
+  color: #e6e6ea;
+}
+.sleek-notification .message-header .message-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.20);
+}
+
+/* Body */
+.sleek-notification .message-title { color: #f5f5f7; }
+.sleek-notification .message-content .url-highlighter { color: #c9cbd3; }
+.sleek-notification .message-box .message-icon { icon-size: 44px; }
+.sleek-notification .message-box .message-icon.message-themed-icon {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+  icon-size: 20px;
+  min-width: 44px;
+  min-height: 44px;
+}
+.sleek-notification .notification-button {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.10);
+}
+.sleek-notification .notification-button:hover { background-color: rgba(255, 255, 255, 0.18); }
+
+/* Compact layout */
+.sleek-compact .message-header { font-size: 0.9em; }
+.sleek-compact .message-header .message-header-content { min-height: 0; padding-bottom: 0; }
+.sleek-compact .message-header .message-close-button { margin: 2px; padding: 4px; }
+.sleek-compact .message-box { padding: 2px 6px 8px 6px; spacing: 4px; }
+.sleek-compact .message-box:first-child { margin-top: 6px; }
+.sleek-compact .message-box .message-icon { icon-size: 36px; }
+.sleek-compact .message-box .message-icon.message-themed-icon {
+  icon-size: 18px;
+  min-width: 36px;
+  min-height: 36px;
+}
+.sleek-compact .message-box .message-content { spacing: 1px; }
+.sleek-compact .message-action-bin { padding: 2px 4px 4px 4px; }
+
+/* Countdown bar */
+.sleek-progress {
+  height: 3px;
+  border-radius: 2px;
+  background-color: st-transparentize(-st-accent-color, 0.15);
+}
+
+/* ---- Notification center (clock drop-down) ---- */
+.popup-menu-content.sleek-center {
+  background-color: #1f2128;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 10px;
+}
+
+/* Notification column */
+.sleek-center .message-list {
+  width: 27em;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+.sleek-center-header { padding: 6px 12px 10px 8px; spacing: 8px; }
+.sleek-center-title { font-weight: bold; font-size: 1.1em; color: #f0f0f3; }
+.sleek-count {
+  background-color: rgba(255, 255, 255, 0.10);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: 0.8em;
+  color: #cfd0d6;
+}
+.sleek-pill {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.07);
+  color: #d6d7dd;
+  font-size: 0.9em;
+}
+.sleek-pill:hover { background-color: rgba(255, 255, 255, 0.14); }
+.sleek-pill:active { background-color: rgba(255, 255, 255, 0.20); }
+.sleek-pill.sleek-pill-active {
+  background-color: st-transparentize(-st-accent-color, 0.55);
+  color: #ffffff;
+}
+.sleek-pill-box { spacing: 6px; }
+.sleek-pill-icon { icon-size: 14px; }
+
+.sleek-center .message-list .message-list-placeholder { color: #7f828c; spacing: 4px; }
+.sleek-center .message-list .message-list-placeholder > StIcon { icon-size: 44px; margin-bottom: 6px; }
+
+.sleek-center .message-notification-group .message-group-header .message-group-title {
+  font-size: 0.85em;
+  font-weight: normal;
+  color: #8f929c;
+}
+.sleek-center .message-notification-group .message-collapse-button {
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.sleek-center .message-view .message {
+  background-color: rgba(38, 40, 49, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  margin-bottom: 8px !important;
+  padding: 4px;
+}
+.sleek-center .message-view .message:hover { border-color: rgba(255, 255, 255, 0.16); }
+.sleek-center .message-view .message:second-in-stack { background-color: rgba(33, 35, 43, 0.95); }
+.sleek-center .message-view .message:lower-in-stack { background-color: rgba(29, 31, 38, 0.95); }
+.sleek-center .message .message-header { color: #8f929c; }
+.sleek-center .message .message-header .message-header-content .event-time { color: #7d808a; }
+.sleek-center .message .message-header .message-close-button { background-color: rgba(255, 255, 255, 0.10); }
+.sleek-center .message .message-title { color: #f5f5f7; }
+.sleek-center .message .message-content .url-highlighter { color: #c9cbd3; }
+.sleek-center .message .message-box .message-icon { icon-size: 36px; }
+.sleek-center .message .message-box .message-icon.message-themed-icon {
+  border-radius: 10px;
+  icon-size: 18px;
+  min-width: 36px;
+  min-height: 36px;
+}
+.sleek-center .message .message-box:first-child { margin-top: 6px; }
+
+/* Calendar column */
+.sleek-center .datemenu-today-button,
+.sleek-center .events-button,
+.sleek-center .world-clocks-button,
+.sleek-center .weather-button {
+  background-color: rgba(255, 255, 255, 0.045);
+  border-radius: 14px;
+}
+.sleek-center .datemenu-today-button:hover,
+.sleek-center .events-button:hover,
+.sleek-center .world-clocks-button:hover,
+.sleek-center .weather-button:hover { background-color: rgba(255, 255, 255, 0.08); }
+.sleek-center .datemenu-today-button .day-label { color: #8f929c; font-weight: normal; }
+.sleek-center .calendar .calendar-day { font-weight: normal; }
+.sleek-center .calendar .calendar-day.calendar-today { font-weight: bold; }
+.sleek-center .calendar .calendar-week-number {
+  background-color: transparent;
+  color: #6c6f79;
+  font-weight: normal;
+}
+.sleek-center .calendar .calendar-day-heading { color: #8f929c; font-weight: normal; }
+.sleek-center .events-button .events-box .events-title,
+.sleek-center .weather-button .weather-box .weather-header-box .weather-header,
+.sleek-center .world-clocks-button .world-clocks-header { color: #8f929c; font-size: 0.9em; }
+.sleek-center .events-button .events-box .events-list .event-box .event-time { color: #8f929c; font-size: 0.9em; }
+
+/* GNOME paints flat buttons in the old popover grey (#36363a); make them
+   transparent on our darker popover. */
+.sleek-center .calendar .calendar-day,
+.sleek-center .calendar .calendar-day-heading,
+.sleek-center .calendar .calendar-month-header .calendar-month-label,
+.sleek-center .calendar .calendar-month-header .pager-button,
+.sleek-center .message .message-header .flat.message-close-button,
+.sleek-center .message-notification-group .flat.message-collapse-button {
+  background-color: transparent;
+}
+.sleek-center .calendar .calendar-day:hover,
+.sleek-center .calendar .calendar-month-header .calendar-month-label:hover,
+.sleek-center .calendar .calendar-month-header .pager-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.sleek-center .calendar .calendar-day:active,
+.sleek-center .calendar .calendar-day:selected,
+.sleek-center .calendar .calendar-month-header .pager-button:active {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+.sleek-center .calendar .calendar-day.calendar-today,
+.sleek-center .calendar .calendar-day.calendar-today:hover,
+.sleek-center .calendar .calendar-day.calendar-today:selected {
+  background-color: -st-accent-color;
+  color: -st-accent-fg-color;
+}
+.sleek-center .calendar .calendar-day.calendar-other-month { color: rgba(255, 255, 255, 0.35); }
+.sleek-center .calendar .calendar-day.calendar-weekend { color: #9b9ea8; }
+.sleek-center .calendar .calendar-day-heading { color: #7d808a; }
+.sleek-center .calendar .calendar-month-header .calendar-month-label { font-weight: bold; }
+.sleek-center .datemenu-today-button:hover,
+.sleek-center .datemenu-today-button:active { background-color: rgba(255, 255, 255, 0.08); }
+.sleek-center .datemenu-today-button .date-label { font-size: 1.3em; }
+
+/* Tighter, quieter notification cards */
+.sleek-center .message .message-header .message-header-content .message-source-title {
+  font-weight: normal;
+  font-size: 0.9em;
+}
+.sleek-center .message .message-header .message-source-icon { icon-size: 14px; }
+.sleek-center .message .message-header .message-header-content { padding-bottom: 2px; min-height: 0; }
+.sleek-center .message .message-box { padding: 2px 8px 8px 8px; }
+.sleek-center .message .message-box:first-child { margin-top: 4px; }
+.sleek-center .message .message-close-button { margin: 2px; padding: 4px; }
+
+/* ---- Card layout: [edge] [tile] [app · time / title / body] [close] ---- */
+.sleek-card-layout .message-box {
+  spacing: 10px;
+  padding: 10px 6px 10px 8px;
+  margin-top: 0;
+}
+.sleek-card-layout .message-box .message-content { spacing: 1px; }
+.sleek-edge { width: 3px; border-radius: 2px; }
+.sleek-app-tile {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.sleek-app-icon { icon-size: 24px; }
+.sleek-card-layout .message-box .message-icon { icon-size: 38px; }
+.sleek-card-layout .message-box .message-icon.message-themed-icon {
+  border-radius: 11px;
+  icon-size: 20px;
+  min-width: 38px;
+  min-height: 38px;
+}
+.sleek-meta { spacing: 6px; padding-bottom: 1px; min-height: 0; }
+.sleek-meta .message-source-title { font-weight: normal; font-size: 0.85em; color: #8f929c; }
+.sleek-meta .event-time { font-size: 0.85em; color: #7d808a; padding-bottom: 0; }
+.sleek-card-layout .message-title { font-weight: bold; color: #f5f5f7; }
+.sleek-card-layout .message-box .message-close-button,
+.sleek-card-layout .message-box .message-expand-button {
+  margin: 0;
+  padding: 4px;
+  border-radius: 999px;
+}
+.sleek-compact.sleek-card-layout .message-box { padding: 8px 6px 8px 8px; spacing: 8px; }
+.sleek-compact .sleek-app-tile { width: 32px; height: 32px; border-radius: 9px; }
+.sleek-compact .sleek-app-icon { icon-size: 20px; }
+
+/* Size pass: smaller tile and buttons so text gets the room */
+.sleek-app-tile { width: 32px; height: 32px; border-radius: 9px; }
+.sleek-app-icon { icon-size: 20px; }
+.sleek-card-layout .message-box .message-icon { icon-size: 32px; }
+.sleek-card-layout .message-box .message-icon.message-themed-icon {
+  border-radius: 9px;
+  icon-size: 18px;
+  min-width: 32px;
+  min-height: 32px;
+}
+.sleek-card-layout .message-box .message-close-button,
+.sleek-card-layout .message-box .message-expand-button {
+  padding: 5px;
+  min-width: 0;
+  min-height: 0;
+}
+.sleek-card-layout .message-box .message-close-button StIcon,
+.sleek-card-layout .message-box .message-expand-button StIcon { icon-size: 14px; }
+.sleek-card-layout .message-box .message-expand-button { background-color: rgba(255, 255, 255, 0.06); }
+
+/* Open app groups: [icon] App [count] */
+.sleek-center .sleek-open-group .message-group-header { padding: 2px 4px 6px 6px; spacing: 6px; }
+.sleek-group-icon { icon-size: 14px; color: #8f929c; }
+.sleek-center .sleek-open-group .message-group-header .message-group-title { margin: 0; }
+.sleek-buttons { spacing: 4px; }

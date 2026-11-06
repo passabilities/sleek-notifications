@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <enum id="org.gnome.shell.extensions.sleek-notifications.position">
+    <value nick="top-left" value="0"/>
+    <value nick="top-center" value="1"/>
+    <value nick="top-right" value="2"/>
+  </enum>
+  <enum id="org.gnome.shell.extensions.sleek-notifications.accent-source">
+    <value nick="app" value="0"/>
+    <value nick="system" value="1"/>
+  </enum>
+  <schema id="org.gnome.shell.extensions.sleek-notifications" path="/org/gnome/shell/extensions/sleek-notifications/">
+    <key name="timeout" type="i">
+      <range min="1000" max="30000"/>
+      <default>4000</default>
+      <summary>How long a banner stays on screen (ms)</summary>
+    </key>
+    <key name="keep-critical" type="b">
+      <default>true</default>
+      <summary>Keep critical notifications (e.g. low battery) until dismissed</summary>
+    </key>
+    <key name="position" enum="org.gnome.shell.extensions.sleek-notifications.position">
+      <default>'top-right'</default>
+      <summary>Where banners appear</summary>
+    </key>
+    <key name="edge-margin" type="i">
+      <range min="0" max="64"/>
+      <default>12</default>
+      <summary>Gap from the screen edge (px)</summary>
+    </key>
+    <key name="width" type="i">
+      <range min="260" max="640"/>
+      <default>380</default>
+      <summary>Banner width (px)</summary>
+    </key>
+    <key name="opacity" type="i">
+      <range min="40" max="100"/>
+      <default>90</default>
+      <summary>Background opacity (%)</summary>
+    </key>
+    <key name="corner-radius" type="i">
+      <range min="0" max="32"/>
+      <default>16</default>
+      <summary>Corner radius (px)</summary>
+    </key>
+    <key name="compact" type="b">
+      <default>true</default>
+      <summary>Compact layout with smaller icon and padding</summary>
+    </key>
+    <key name="accent-line" type="b">
+      <default>false</default>
+      <summary>Accent-colored underline (otherwise a soft drop shadow)</summary>
+    </key>
+    <key name="slide-motion" type="b">
+      <default>true</default>
+      <summary>Slide banners in from the screen edge</summary>
+    </key>
+    <key name="countdown-bar" type="b">
+      <default>true</default>
+      <summary>Show a shrinking countdown bar that pauses on hover</summary>
+    </key>
+    <key name="hover-close" type="b">
+      <default>true</default>
+      <summary>Only show the close button on hover</summary>
+    </key>
+    <key name="max-visible" type="i">
+      <range min="1" max="5"/>
+      <default>3</default>
+      <summary>How many banners can be on screen at once</summary>
+    </key>
+    <key name="accent-source" enum="org.gnome.shell.extensions.sleek-notifications.accent-source">
+      <default>'app'</default>
+      <summary>Accent color: each app's icon color, or the system accent</summary>
+    </key>
+    <key name="swipe-dismiss" type="b">
+      <default>true</default>
+      <summary>Drag a banner sideways to dismiss it</summary>
+    </key>
+    <key name="hover-lift" type="b">
+      <default>true</default>
+      <summary>Lift a banner slightly on hover</summary>
+    </key>
+    <key name="restyle-center" type="b">
+      <default>true</default>
+      <summary>Restyle the notification center (clock drop-down)</summary>
+    </key>
+    <key name="open-groups" type="b">
+      <default>true</default>
+      <summary>Show every app's notifications open under an app header instead of stacked</summary>
+    </key>
+  </schema>
+</schemalist>
